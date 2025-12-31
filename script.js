@@ -1,4 +1,7 @@
- const city = "Cairo";
+// 🔴 للتجربة فقط
+
+
+const city = "Cairo";
   const country = "EG";
   const method = 5;
   const prayers = ["الفجر", "الظهر", "العصر", "المغرب", "العشاء"];
@@ -20,6 +23,8 @@
   const monthsHeader = document.getElementById("monthsHeader");
   const prayerTimeInfo = document.getElementById("prayerTimeInfo");
   const year = new Date().getFullYear();
+  
+
   
   document.getElementById("currentYear").textContent = year;
 
@@ -337,7 +342,11 @@
       } else if (dateKey < todayDateStr) {
         // يوم ماضي - للعرض فقط
         cell.className = "day past-day";
-        renderCell(dateKey, level, cell);
+        // renderCell(dateKey, level, cell);
+  if(level > 0) {
+    cell.classList.add("l"+level);  // إضافة اللون مباشرة
+  }
+
         cell.addEventListener("click", () => {
           alert("⛔ لا يمكن تعديل أيام ماضية!\n\nيمكنك فقط تسجيل صلوات اليوم الحالي.");
         });
