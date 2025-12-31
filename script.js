@@ -1,5 +1,3 @@
-// 🔴 للتجربة فقط
-
 
 const city = "Cairo";
   const country = "EG";
@@ -533,3 +531,4 @@ const city = "Cairo";
 
   // تشغيل التطبيق
   initializeApp();
+
